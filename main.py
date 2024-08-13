@@ -17,8 +17,6 @@ FRED_API_KEY = os.getenv('FRED_API_KEY')
 if not FRED_API_KEY:
     raise ValueError("FRED_API_KEY not found. Please set it in the .env file.")
 
-print("FRED API Key:", FRED_API_KEY)
-
 url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
 response = requests.get(url)
 
