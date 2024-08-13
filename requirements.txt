@@ -4,4 +4,4 @@ requests
 bs4
 yfinance
 fredapi
-dotenv
+python-dotenv
