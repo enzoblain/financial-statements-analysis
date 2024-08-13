@@ -1,21 +1,13 @@
-import pandas as pd
-import numpy as np
-import requests
+from utils.config import FRED_API_KEY
+
+import os, re, requests
+
 from bs4 import BeautifulSoup
-import yfinance as yf
 from fredapi import Fred
-import os
-import time
-import re
 
-from dotenv import load_dotenv
-
-load_dotenv()
-
-FRED_API_KEY = os.getenv('FRED_API_KEY')
-
-if not FRED_API_KEY:
-    raise ValueError("FRED_API_KEY not found. Please set it in the .env file.")
+import numpy as np
+import pandas as pd
+import yfinance as yf
 
 url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
 response = requests.get(url)
