@@ -12,7 +12,7 @@ This project provides a Python tool for analyzing financial statements of corpor
 
 ### Prerequisites
 
-Before you begin, ensure you have Python 3.x installed on your system. You will also need to install the required Python packages listed in `requirements.txt`.
+Before you begin, ensure you have Python 3.10 installed on your system. You will also need to install the required Python packages listed in `requirements.txt`.
 
 ### Installation
 
