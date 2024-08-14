@@ -1,5 +1,5 @@
 from finance_data_processing.cik import fetch_cik_for_ticker
-from finance_data_processing.utils import _get_file_name, _is_statement_file
+from utils.utils import _get_file_name, _is_statement_file
 from utils.config import HEADERS, TICKER
 
 import requests
