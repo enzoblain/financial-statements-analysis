@@ -1,4 +1,4 @@
-from finance_data_processing.data_processing import apply_moving_window, handle_zero_occurrences
+from utils.data_processing import apply_moving_window, handle_zero_occurrences
 
 import numpy as np
 import pandas as pd

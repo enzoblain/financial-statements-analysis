@@ -1,5 +1,5 @@
 from utils.config import FRED_API_KEY
-from finance_data_processing.snp500_analysis import calculate_snp_returns
+from snp500.snp500_analysis import calculate_snp_returns
 
 from fredapi import Fred
 
@@ -73,7 +73,7 @@ def calculate_capm(beta_values):
     except Exception as e:
         raise RuntimeError(f"Error calculating CAPM: {str(e)}")
 
-from finance_data_processing.data_processing import apply_moving_window, handle_zero_occurrences 
+from utils.data_processing import apply_moving_window, handle_zero_occurrences 
 
 def list_all(symbols, batch_size=10):
     """
