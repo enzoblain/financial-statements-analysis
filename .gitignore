@@ -1,6 +1,3 @@
 .env
 venv/
-utils/__pycache__
-finance_data_processing/__pycache__
-financial_analysis/__pycache__
-snp500/__pycache__
+__pycache__/
