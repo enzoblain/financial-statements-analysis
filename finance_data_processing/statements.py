@@ -7,18 +7,6 @@ import requests
 from bs4 import BeautifulSoup
 
 def extract_statement_file_names(accession_number):
-    """
-    Extracts statement file names from the filing summary XML for a given accession number.
-
-    Parameters:
-    - accession_number (str): The accession number of the filing.
-
-    Returns:
-    - dict: Dictionary mapping statement types to file names.
-
-    Raises:
-    - RuntimeError: If the request fails or data processing errors occur.
-    """
     try:
         cik = fetch_cik_for_ticker()
         if not cik:
