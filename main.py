@@ -1,16 +1,17 @@
-from finance_data_processing.filings import get_filtered_filings
-from finance_data_processing.statements import extract_statement_file_names
+from functions.data_fetcher import save_data
+from functions.data_selection import get_data
+from functions.calcul import calculate_wr
+from utils.config import CONFIGURATION, DATA
+from functions.data_visualization import display
+from functions.data_fetcher import save_data
+from functions.calcul import find_range
 
-def main():
-    try:
-        accession_numbers = get_filtered_filings(is_10k=False, return_accession_numbers=True)
-        if not accession_numbers.empty:
-            accession_number = accession_numbers.iloc[0].replace("-", "")
-            print(extract_statement_file_names(accession_number))
-        else:
-            print("No accession numbers found.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
+def main() -> None:
+    save_data()
+    print(f'{CONFIGURATION["SYMBOL"]} : {calculate_wr(CONFIGURATION["SYMBOL"])}%')
+    display()
+    save_data(CONFIGURATION['SYMBOL'])
+    find_range(DATA['BALANCE_SHEET'], 'inventory', 'Apple', 'AAPL')
 
 if __name__ == "__main__":
     main()
