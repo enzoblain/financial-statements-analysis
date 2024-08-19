@@ -2,9 +2,6 @@ from finance_data_processing.filings import get_filtered_filings
 from finance_data_processing.statements import extract_statement_file_names
 
 def main():
-    """
-    Main function that retrieves filtered filings and extracts statement file names.
-    """
     try:
         accession_numbers = get_filtered_filings(is_10k=False, return_accession_numbers=True)
         if not accession_numbers.empty:
